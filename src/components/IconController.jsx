@@ -28,14 +28,15 @@ const IconController = () => {
   }, [size, rotate, color, icon]);
 
   return (
-    <div>
+    <div className=" bg-neutral-900 text-white p-8 rounded-lg ">
       <div>
         <IconList selectedIcon={(icon) => setIcon(icon)} />
         <div className="py-2">
-          <label className="p-2 flex justify-between items-center">
+          <label className="p-2 flex justify-between items-center font-semibold text-xl">
             Size <span>{size} px</span>
           </label>
           <Slider
+          className="  text-black "
             defaultValue={[size]}
             max={512}
             step={1}
@@ -43,7 +44,7 @@ const IconController = () => {
           />
         </div>
         <div className="py-2">
-          <label className="p-2 flex justify-between items-center">
+          <label className="p-2 flex justify-between items-center font-semibold text-xl">
             Rotate <span>{rotate} °</span>
           </label>
           <Slider

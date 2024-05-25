@@ -2,6 +2,7 @@ import { UpdateStorageContext } from "@/context/UpdateStorageContext";
 import html2canvas from "html2canvas";
 import { icons } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
+const BASE_URL = "https://logoexpress.tubeguruji.com";
 
 const LogoPreview = ({ downloadIcon }) => {
   const [storageValue, setStorageValue] = useState();
@@ -52,9 +53,9 @@ const LogoPreview = ({ downloadIcon }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-screen ">
       <div
-        className="h-[450px] w-[450px] bg-gray-200 outline-dotted outline-gray-300"
+        className="h-[550px] w-[550px] bg-neutral-900 rounded-lg outline-dotted outline-gray-300 "
         style={{ padding: storageValue?.bgPadding }}
       >
         <div
@@ -65,7 +66,16 @@ const LogoPreview = ({ downloadIcon }) => {
             background: storageValue?.bgColor,
           }}
         >
-          {storageValue && (
+          {storageValue?.icon?.includes(".png") ? (
+            <img
+              src={"/png/" + storageValue?.icon}
+              style={{
+                height: storageValue?.iconSize,
+                width: storageValue?.iconSize,
+                transform: `rotate(${storageValue?.iconRotate}deg)`,
+              }}
+            />
+          ) : (
             <Icon
               name={storageValue?.icon}
               color={storageValue?.iconColor}

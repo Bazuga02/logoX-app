@@ -31,8 +31,8 @@ const BackgroundController = () => {
   });
 
   return (
-    <div>
-      <div className="py-2">
+    <div className=" bg-neutral-900 text-white p-8 rounded-lg">
+      <div className="py-2 ">
         <label className="p-2 flex justify-between items-center ">
           Rounded <span>{rounded} °</span>
         </label>
