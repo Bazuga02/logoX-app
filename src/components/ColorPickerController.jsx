@@ -12,7 +12,7 @@ const ColorPickerController = ({ hideController = false, selectedColor }) => {
           selectedColor(e);
         }}
         hideControls={hideController}
-        hideEyeDrop
+        hideEyeDropyy
         hideAdvancedSliders
         hideColorGuide
         hideInputType

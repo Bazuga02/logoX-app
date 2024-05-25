@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 
 function Header({ DownloadIcon }) {
   return (
-    <div className="p-2 shadow-sm border flex justify-between items-center   bg-neutral-900  ">
+    <div className="p-2 shadow-sm border flex justify-between items-center  yyy bg-neutral-900  ">
       <div className=" flex items-center     ">
         <img src={logo1} className=" h-20 " alt="" />
         <h1 className=" text-2xl  font-extrabold  text-white   ">L0G0-X</h1>

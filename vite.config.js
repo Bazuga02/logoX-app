@@ -14,7 +14,7 @@ export default defineConfig({
     port: "3333",
     strictPort: true,
     proxy: {
-      "/png": "https://logoexpress.tubeguruji.com",
+      "/png/": "https://logoexpress.tubeguruji.com/png/",
     },
   },
 });
